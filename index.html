@@ -21,7 +21,6 @@
             overflow-x: hidden;
         }
 
-        /* Efeito de Scanline (Monitor Antigo) */
         body::before {
             content: " ";
             display: block;
@@ -51,6 +50,7 @@
         .terminal-border {
             border: 1px solid var(--terminal-green);
             box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+            background: rgba(0, 40, 0, 0.05);
         }
 
         .btn-cyber {
@@ -67,30 +67,26 @@
             box-shadow: 0 0 20px var(--terminal-green);
         }
 
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background-color: var(--terminal-green);
-            animation: blink 1s infinite;
-            vertical-align: middle;
-        }
-
-        @keyframes blink {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
+        .section-title {
+            border-left: 4px solid var(--terminal-green);
+            padding-left: 15px;
+            margin-bottom: 2rem;
         }
     </style>
 </head>
 <body class="p-4 md:p-8">
 
-    <!-- Header / Status -->
     <div class="max-w-5xl mx-auto">
-        <div class="mb-8 border-b border-green-900 pb-4">
-            <p class="text-sm opacity-70">STATUS: <span class="animate-pulse">ONLINE</span></p>
-            <p class="text-sm opacity-70">LOCATION: REMOTE_ACCESS_ENABLED</p>
-            <p class="text-sm opacity-70">ENCRYPTION: AES_256_ACTIVE</p>
+        <!-- Status Bar -->
+        <div class="mb-8 border-b border-green-900 pb-4 flex justify-between items-center">
+            <div>
+                <p class="text-sm opacity-70">STATUS: <span class="animate-pulse">ONLINE_READY</span></p>
+                <p class="text-sm opacity-70">SESSION: BRUNO_SALOMAO_SEC</p>
+            </div>
+            <div class="hidden md:block text-right">
+                <p class="text-sm opacity-70">ENCRYPTION: RSA_4096</p>
+                <p class="text-sm opacity-70">REGION: BRAZIL_SRV</p>
+            </div>
         </div>
 
         <!-- Hero Section -->
@@ -106,14 +102,14 @@
                 <p class="mb-8 text-gray-400 leading-relaxed">
                     Especialista em infraestrutura de missão crítica e segurança ofensiva. 
                     Minha missão é identificar vulnerabilidades antes que seus adversários o façam 
-                    e construir ambientes resilientes, escaláveis e altamente performáticos.
+                    e construir ambientes resilientes, escaláveis e prontos para o futuro.
                 </p>
             </div>
         </header>
 
-        <!-- Skills / Tech Stack -->
+        <!-- Core Competencies -->
         <section class="mb-16">
-            <h2 class="text-2xl mb-6 font-bold text-white underline">CORE_COMPETENCIES:</h2>
+            <h2 class="section-title text-2xl font-bold text-white">CORE_COMPETENCIES</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="terminal-border p-4 text-center">DOCKER</div>
                 <div class="terminal-border p-4 text-center">KUBERNETES</div>
@@ -121,5 +117,109 @@
                 <div class="terminal-border p-4 text-center">VIRTUALIZAÇÃO</div>
                 <div class="terminal-border p-4 text-center">NETWORKS</div>
                 <div class="terminal-border p-4 text-center">PENTEST</div>
-                <div class="terminal-border p-4 text-center">SECURITY HARDENING</div>
-                <div class="
+                <div class="terminal-border p-4 text-center">HARDENING</div>
+                <div class="terminal-border p-4 text-center">FIREWALLS</div>
+            </div>
+        </section>
+
+        <!-- Methodology - NEW SECTION -->
+        <section class="mb-16">
+            <h2 class="section-title text-2xl font-bold text-white">METODOLOGIA_DE_TRABALHO</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="terminal-border p-6">
+                    <span class="text-3xl font-bold text-white">01.</span>
+                    <h3 class="text-lg font-bold mb-2 mt-2">DIAGNÓSTICO</h3>
+                    <p class="text-sm text-gray-400">Mapeamento completo da topologia de rede, ativos críticos e pontos de entrada potenciais.</p>
+                </div>
+                <div class="terminal-border p-6">
+                    <span class="text-3xl font-bold text-white">02.</span>
+                    <h3 class="text-lg font-bold mb-2 mt-2">AUDITORIA</h3>
+                    <p class="text-sm text-gray-400">Execução de testes de invasão (Pentest) e escaneamento de vulnerabilidades em tempo real.</p>
+                </div>
+                <div class="terminal-border p-6">
+                    <span class="text-3xl font-bold text-white">03.</span>
+                    <h3 class="text-lg font-bold mb-2 mt-2">MITIGAÇÃO</h3>
+                    <p class="text-sm text-gray-400">Implementação de correções, hardening de sistemas e entrega de relatório executivo para gestão.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="mb-16">
+            <h2 class="section-title text-2xl font-bold text-white">SERVIÇOS_DE_ALTO_IMPACTO</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="terminal-border p-6">
+                    <h3 class="text-xl mb-4 text-white font-bold"><i class="fas fa-shield-virus mr-2"></i> AUDITORIA DE SEGURANÇA & LGPD</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Identificação de brechas críticas e conformidade com a LGPD. Evite multas e vazamentos de dados que podem destruir a reputação da sua empresa.
+                    </p>
+                    <ul class="text-sm space-y-2 mb-6">
+                        <li class="text-green-300">> Pentest de Infraestrutura e Web</li>
+                        <li class="text-green-300">> Relatório de Vulnerabilidades Críticas</li>
+                        <li class="text-green-300">> Hardening de Servidores e Bancos de Dados</li>
+                    </ul>
+                </div>
+
+                <div class="terminal-border p-6">
+                    <h3 class="text-xl mb-4 text-white font-bold"><i class="fas fa-server mr-2"></i> INFRAESTRUTURA E DEVOPS</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Migração para ambientes virtualizados modernos e orquestração de containers para alta disponibilidade e escalabilidade.
+                    </p>
+                    <ul class="text-sm space-y-2 mb-6">
+                        <li class="text-green-300">> Implementação Proxmox & Virtualização</li>
+                        <li class="text-green-300">> Orquestração de Clusters Kubernetes</li>
+                        <li class="text-green-300">> Otimização de Custos em Cloud e On-Premise</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience / Projects - NEW SECTION -->
+        <section class="mb-16">
+            <h2 class="section-title text-2xl font-bold text-white">EXPERIÊNCIA_TÉCNICA</h2>
+            <div class="space-y-4">
+                <div class="terminal-border p-4">
+                    <h4 class="text-white font-bold">[PROJETO] Virtualização de Alta Disponibilidade</h4>
+                    <p class="text-sm text-gray-400">Desenvolvimento e configuração de cluster Proxmox com backup automatizado e failover de rede.</p>
+                </div>
+                <div class="terminal-border p-4">
+                    <h4 class="text-white font-bold">[PROJETO] Orquestração de Microserviços</h4>
+                    <p class="text-sm text-gray-400">Implementação de infraestrutura Kubernetes para deploy escalável de aplicações em containers Docker.</p>
+                </div>
+                <div class="terminal-border p-4">
+                    <h4 class="text-white font-bold">[PROJETO] Pentest de Redes Corporativas</h4>
+                    <p class="text-sm text-gray-400">Identificação de falhas de segurança em redes Wi-Fi corporativas e servidores expostos à internet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / CTA -->
+        <section class="text-center py-16 border-t border-green-900">
+            <h2 class="text-2xl mb-8 font-bold">ESTABELECER_CONTATO</h2>
+            <div class="flex flex-wrap justify-center gap-6 mb-10">
+                <a href="https://github.com/salomaocybersec" target="_blank" class="btn-cyber">
+                    <i class="fab fa-github mr-2"></i> GITHUB
+                </a>
+                <a href="https://www.linkedin.com/in/bruno-salomao/" target="_blank" class="btn-cyber">
+                    <i class="fab fa-linkedin mr-2"></i> LINKEDIN
+                </a>
+            </div>
+            
+            <a href="https://wa.me/5511947825316" target="_blank" class="btn-cyber text-xl px-12 py-6 bg-green-900/20">
+                <i class="fab fa-whatsapp mr-2"></i> SOLICITAR INTERVENÇÃO AGORA
+            </a>
+            <p class="mt-6 text-xs opacity-50">SISTEMA DE RESPOSTA RÁPIDA ATIVO | DISPONIBILIDADE IMEDIATA</p>
+        </section>
+
+        <footer class="mt-20 text-center text-xs opacity-40">
+            <p>USER_ID: BRUNO_SALOMAO | SYSTEM_V.2024.01_SECURE</p>
+            <p class="mt-2">© 2024 - SALOMAO CYBERSEC - TODOS OS DIREITOS RESERVADOS</p>
+        </footer>
+    </div>
+
+    <div class="fixed bottom-4 right-4 text-xs opacity-30">
+        <p>SESSION_ID: 0x7F3A21_SECURE</p>
+    </div>
+
+</body>
+</html>
